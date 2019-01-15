@@ -62,7 +62,7 @@ class TestLibrary < Minitest::Test
       end
 
       def test_get_rental_info()
-        library = library = Library.new([{
+        library = Library.new([{
           title: "Harry Potter and the Philosophers Stone",
           rental_details: {
             student_name: "Robert",

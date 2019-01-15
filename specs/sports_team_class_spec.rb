@@ -42,6 +42,11 @@ class TestSportsTeam < Minitest::Test
     assert_equal(false, team.check_if_in_team("Eden Hazard"))
   end
 
+  def test_get_points()
+    team = SportsTeam.new("Machester United", ["Anthony Martial", "Paul Pogba", "Marcus Rashford", "David De Gea", "Phil Jones"], "Robert Templeton")
+    assert_equal(0, team.points)
+  end
+
   def test_point_distribution__for_win()
     team = SportsTeam.new("Machester United", ["Anthony Martial", "Paul Pogba", "Marcus Rashford", "David De Gea", "Phil Jones"], "Robert Templeton")
     team.distribute_points("win")
